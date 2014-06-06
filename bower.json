@@ -1,7 +1,20 @@
 {
   "author": "Bjarki Sorens",
   "name": "angular-datafetcher",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "main": "lib/datafetcher.js",
+  "ignore": [
+    "test",
+    ".bowerrc",
+    ".editorconfig",
+    ".gitignore",
+    ".jshintrc",
+    "bower.json",
+    "Gruntfile.js",
+    "karma.conf.js"
+    "package.json",
+    "README.md",
+  ],
   "dependencies": {
     "angular": "1.2.15",
     "angular-resource": "1.2.15",
