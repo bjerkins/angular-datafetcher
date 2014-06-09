@@ -9,6 +9,18 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
+    // Install watch task
+    watch: {
+      js: {
+        files: ['lib/*.js'],
+        tasks: ['newer:jshint:all']
+      },
+      jsTest: {
+        files: ['test/*.js'],
+        tasks: ['newer:jshint:test', 'karma']
+      },
+    },
+
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
       options: {
@@ -38,6 +50,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'jshint',
-    'karma'
+    'karma',
+  ]);
+
+  grunt.registerTask('build', [
+    'jshint',
+    'karma',
+    'watch'
   ]);
 };

@@ -11,8 +11,8 @@ describe('angular-datafetcher', function () {
       API_URL = 'http://localhost:13740/api/',
       route = 'miscellaneous/captcha';
 
-  beforeEach(inject(function (_datafetcher_, $injector) {
-    datafetcher = _datafetcher_;
+  beforeEach(inject(function (_$datafetcher_, $injector) {
+    datafetcher = _$datafetcher_;
 
     $httpBackend = $injector.get('$httpBackend');
   }));
