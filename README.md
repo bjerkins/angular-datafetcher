@@ -25,12 +25,33 @@ var myAppModule = angular.module('MyApp', ['angular-datafetcher']);
 
 and then you can inject `datafetcher` wherever you like:
 ```javascript
-angular.module('MyApp')
-  .controller('MainCtrl', function ($scope, datafetcher) {
-    datafetcher.get('http://someapi.com/api/apimethod').then(function (data) {
+angular.module('MyApp').controller('MainCtrl', function ($scope, datafetcher) { ... });
+```
+
+The fetcher returns a promise so use the `then` callback to retrieve the data.
+
+```javascript
+datafetcher.get('http://someapi.com/api/apimethod').then(function (data) {
       console.log(data);
     }, function (reason) {
       console.log(reason);
     });
   });
 ```
+
+### API
+
+#### datafetcher.get(url, cacheIt)
+- url - the complete URL of the requested resource
+- cacheIt - should the result be cached?
+
+#### datafetcher.post(url, payload)
+- url - the complete URL of the requested POST location
+- payload - the payload that should be sent with the POST method
+
+#### datafetcher.put(url, payload)
+- url - the complete URL of the requested PUT location
+- payload - the payload that should be sent with the PUT method
+
+
+
