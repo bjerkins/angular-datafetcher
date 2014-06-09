@@ -1,7 +1,6 @@
 angular-datafetcher
 ===========
-
-Generic datafetcher for GET, POST, PUT, DELETE and returns promises.
+[![Build Status](https://travis-ci.org/bjerkins/angular-datafetcher.svg?branch=master)](https://travis-ci.org/bjerkins/angular-datafetcher) Generic datafetcher for GET, POST, PUT, DELETE and returns promises.
 
 ### Requirements
 - [AngularJS](http://angularjs.org/)
