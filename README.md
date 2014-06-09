@@ -32,11 +32,10 @@ The fetcher returns a promise so use the `then` callback to retrieve the data.
 
 ```javascript
 datafetcher.get('http://someapi.com/api/apimethod').then(function (data) {
-      console.log(data);
-    }, function (reason) {
-      console.log(reason);
-    });
-  });
+  console.log(data);
+}, function (reason) {
+  console.log(reason);
+});
 ```
 
 ### API
