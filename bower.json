@@ -4,16 +4,17 @@
   "version": "0.0.1",
   "main": "lib/datafetcher.js",
   "ignore": [
-    "test",
     ".bowerrc",
     ".editorconfig",
     ".gitignore",
     ".jshintrc",
+    ".travis.yml",
     "bower.json",
     "Gruntfile.js",
     "karma.conf.js",
     "package.json",
-    "README.md"
+    "README.md",
+    "test"
   ],
   "dependencies": {
     "angular": "1.2.15",
